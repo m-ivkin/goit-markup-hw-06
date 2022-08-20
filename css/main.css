@@ -12,6 +12,7 @@
   --item-backgroung-color: #f5f4fa;
   --icon-primary-color: #afb1b8;
   --social-item-footer: rgba(255, 255, 255, 0.1);
+  --footer-label-color: rgba(255, 255, 255, 0.3);
   --works-description-bg-color: rgba(47, 48, 58, 0.8);
   --card-fill-color: rgba(33, 150, 243, 0.9);
 
@@ -864,6 +865,48 @@ address {
   height: 20px;
 }
 
+/* Form Footer */
+.join-container {
+  margin-left: 93px;
+  margin-top: 12px;
+}
+.form-footer {
+  width: 570px;
+  padding: 0;
+  margin: 0;
+  margin-top: 20px;
+}
+.button-sign {
+  background-color: var(--accent-color);
+  color: var(--primary-white-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  padding: 10px 28px;
+  border-radius: 4px;
+  min-width: 200px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  border: none;
+  margin-left: 8px;
+}
+.join-container input {
+  margin: 0;
+  padding: 15px 16px;
+  width: 358px;
+  border: 1px solid var(--footer-label-color);
+  border-radius: 4px;
+}
+
+.join-container::placeholder input {
+  font-size: 16px;
+  line-height: 1.25;
+  vertical-align: center;
+  letter-spacing: 0.03em;
+  color: var(--footer-label-color);
+}
 /* Animation */
 /* @keyframes heartBeat {
   0% {
