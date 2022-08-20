@@ -67,9 +67,36 @@
                 Замовити послугу
               </button>
         </div>
+      <!--  Modal window -->
         <div class="backdrop is-hidden" data-modal>
           <div class="modal">
             <button type="button" class="backdrop-btn" data-modal-close><svg class="icon-close" width="11" height="11"><use href="./images/svg/sprite.svg#icon-pleaseclose" ></use></svg> </button>
+
+            <form class="form">
+              <div class="form-field">
+                <h2 class="modal-title">Залиште свої дані, ми вам передзвонимо</h2>
+                <label for="name" class="form-label">Ім'я </label>
+    <input class="form-input" type="text" name="username" id="name" />
+              </div>
+ <div class="form-field">
+<label for="tel" class="form-label">Телефон</label>
+    <input class="form-input" type="tel" name="phone_number" id="tel" />
+ </div>
+  
+<div class="form-field">
+<label for="email" class="form-label">Пошта</label>
+    <input class="form-input" type="email" name="email" id="email" />
+</div>
+  
+  <div class="form-field">
+  <label for="comment" class="form-label">Коментар</label> 
+  <textarea class="comment" name="feedback" rows="5" cols="70" id="comment" placeholder="Введіть текст"></textarea>
+  </div>
+  <!-- <label>
+    <input type="checkbox" name="terms" value="Accept" checked />Погоджуюся з розсилкою та приймаю  Умови договору
+  </label> -->
+  <button type="submit" class="button-modal">Відправити</button>
+</form>
           </div>
         </div>
       </section>
@@ -265,7 +292,7 @@
           </ul>
         </address>
         </div>
-        <div class=" social-container">
+        <div class="social-container">
           <h2 class="social-title">Приєднуйтесь</h2>
           <ul class="social list">
                   <li><a href="" class="social-item-footer"><svg class="item-icon" width="44" height="44"> <use href="./images/svg/sprite.svg#icon-instagram"></use></svg></a></li>
@@ -273,6 +300,14 @@
                   <li><a href="" class="social-item-footer"><svg class="item-icon" width="44" height="44"> <use href="./images/svg/sprite.svg#icon-facebook"></use></svg></a></li>
                   <li><a href="" class="social-item-footer"><svg class="item-icon" width="44" height="44"> <use href="./images/svg/sprite.svg#icon-linkedin"></use></svg></a></li>
                 </ul>
+        </div>
+        <div class="join-container">
+          <h2 class="join-title">Підпишіться на розсилку</h2>
+          <form>
+            <label>Email<input type="email" name="email" placeholder="Email" />
+            </label>
+            <button type="submit">Підписатися</button>
+          </form>
         </div>
         </div>
     </footer>
