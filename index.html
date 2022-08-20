@@ -73,28 +73,39 @@
             <button type="button" class="backdrop-btn" data-modal-close><svg class="icon-close" width="11" height="11"><use href="./images/svg/sprite.svg#icon-pleaseclose" ></use></svg> </button>
 
             <form class="form">
+
               <div class="form-field">
                 <h2 class="modal-title">Залиште свої дані, ми вам передзвонимо</h2>
                 <label for="name" class="form-label">Ім'я </label>
-    <input class="form-input" type="text" name="username" id="name" />
+                <input class="form-input" type="text" name="username" id="name" />
+                <svg width="13" height="13" class="form-icon-first"><use href="./images/svg/icons.svg#icon-user"></use></svg>
               </div>
+
  <div class="form-field">
 <label for="tel" class="form-label">Телефон</label>
-    <input class="form-input" type="tel" name="phone_number" id="tel" />
+    <input class="form-input" type="tel" name="phone_number" id="tel"/>
+    <svg  width="13" height="13" class="form-icon"><use href="./images/svg/icons.svg#icon-phone"></use></svg>
  </div>
   
 <div class="form-field">
 <label for="email" class="form-label">Пошта</label>
     <input class="form-input" type="email" name="email" id="email" />
+    <svg width="13" height="13" class="form-icon"><use href="./images/svg/icons.svg#icon-mail"></use></svg>
 </div>
   
   <div class="form-field">
   <label for="comment" class="form-label">Коментар</label> 
   <textarea class="comment" name="feedback" rows="5" cols="70" id="comment" placeholder="Введіть текст"></textarea>
   </div>
-  <!-- <label>
-    <input type="checkbox" name="terms" value="Accept" checked />Погоджуюся з розсилкою та приймаю  Умови договору
-  </label> -->
+  
+  <label class="field">
+    <input class="checkbox" type="checkbox" name="terms" value="Accept" checked /> 
+    <svg class="checkbox-icon" > <use href="./images/svg/icons.svg#icon-check-box"></use>
+    </svg> <span class="terms-text">Погоджуюся з розсилкою та приймаю 
+      <a href="" target="_blank" class="terms-link">Умови договору</a> 
+    </span>
+  </label>
+  
   <button type="submit" class="button-modal">Відправити</button>
 </form>
           </div>
@@ -305,7 +316,7 @@
           <h2 class="social-title">Підпишіться на розсилку</h2>
           <form class="form-footer">
             <label for="email" class="social-label"></label>
-              <input type="email" name="email" placeholder="E-mail" />
+              <input type="email" name="email" placeholder="E-mail" class="social-input" />
             
             <button type="submit" class="button-sign">Підписатися <svg width="24" height="24" class="primary-icon"> <use href="./images/svg/icons.svg#icon-telegram" ></use> </svg> </button>
           </form>

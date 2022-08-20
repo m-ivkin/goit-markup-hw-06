@@ -63,7 +63,9 @@ img {
 address {
   font-style: normal;
 }
-
+input {
+  outline: none;
+}
 /* List */
 .list {
   padding: 0;
@@ -342,8 +344,8 @@ address {
 
 /* Form modal */
 .form {
-  width: 600px;
-  outline: 1px solid tomato;
+  width: 528px;
+  height: 581px;
   margin-left: auto;
   margin-right: auto;
   padding: 40px;
@@ -352,7 +354,9 @@ address {
   margin-bottom: 10px;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
+
 .modal-title {
   margin-bottom: 12px;
   text-align: center;
@@ -368,9 +372,10 @@ address {
   color: var(--paragraph-text-color);
   margin-bottom: 4px;
 }
+
 .form-field input {
   margin: 0;
-  padding: 12px 16px;
+  padding: 12px 40px;
   height: 40px;
   border-radius: 4px;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -393,19 +398,90 @@ address {
   letter-spacing: 1%;
 }
 .button-modal {
-  background-color: var(--accent-color);
-  color: var(--primary-white-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  display: block;
   padding: 10px 52px;
   border-radius: 4px;
   min-width: 200px;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
-  align-self: center;
-  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+
   letter-spacing: 0.06em;
   border: none;
+
+  background-color: var(--accent-color);
+  color: var(--primary-white-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+.form-input:hover,
+.form-input:focus {
+  border-color: var(--accent-color);
+}
+.form-icon {
+  position: absolute;
+  top: 55%;
+  left: 14px;
+
+  display: inline-block;
+}
+.form-icon-first {
+  position: absolute;
+  top: 70%;
+  left: 14px;
+
+  display: inline-block;
+}
+.form-icon:hover,
+.form-icon:focus {
+  fill: var(--accent-color);
+}
+.form-icon-first:hover,
+.form-icon-first:focus {
+  fill: var(--accent-color);
+}
+.form-input:hover ~ .form-icon,
+.form-input:focus ~ .form-icon {
+  fill: var(--accent-color);
+}
+.form-input:hover ~ .form-icon-first,
+.form-input:focus ~ .form-icon-first {
+  fill: var(--accent-color);
+}
+.checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  position: absolute;
+}
+.checkbox-icon {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  margin-right: 9px;
+}
+.field {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+.checkbox:checked + .checkbox-icon {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  background-image: url(../images/svg/Check-it.svg);
+  background-size: contain;
+  background-origin: border-box;
+}
+.terms-text {
+  line-height: 1.71;
+  color: var(--paragraph-text-color);
+}
+.terms-link {
+  color: var(--accent-color);
 }
 /* Features */
 .features-list {
@@ -909,6 +985,18 @@ address {
   vertical-align: center;
   letter-spacing: 0.03em;
   color: var(--footer-label-color);
+}
+.social-input {
+  background-color: var(--footer-backgroung-color);
+  color: var(--primary-white-color);
+}
+.social-input:hover,
+.social-input:focus {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+}
+.join-container::placeholder input:hover {
+  color: var(--accent-color);
 }
 /* Animation */
 /* @keyframes heartBeat {
