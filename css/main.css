@@ -63,7 +63,8 @@ img {
 address {
   font-style: normal;
 }
-input {
+input,
+textarea {
   outline: none;
 }
 /* List */
@@ -260,12 +261,12 @@ input {
   text-align: center;
   letter-spacing: 0.06em;
   border: none;
+  transition: color var(--anim-fast), background-color var(--anim-fast);
 }
 .button-title:hover,
 .button-title:focus {
   background-color: var(--studio-background-color);
   color: var(--primary-text-color);
-  transition: color var(--anim-fast), background-color var(--anim-fast);
 }
 
 /* Modal window */
@@ -397,6 +398,9 @@ input {
   line-height: 1.16;
   letter-spacing: 1%;
 }
+.comment:focus {
+  border-color: var(--accent-color);
+}
 .button-modal {
   display: block;
   padding: 10px 52px;
@@ -415,8 +419,20 @@ input {
   background-color: var(--accent-color);
   color: var(--primary-white-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  transition: color var(--anim-fast), background-color var(--anim-fast),
+    box-shadow var(--anim-fast);
 }
-.form-input:hover,
+
+.button-modal:hover,
+.button-modal:focus {
+  background-color: var(--accent-color);
+  color: var(--primary-white-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+}
+
 .form-input:focus {
   border-color: var(--accent-color);
 }
@@ -434,19 +450,9 @@ input {
 
   display: inline-block;
 }
-.form-icon:hover,
-.form-icon:focus {
-  fill: var(--accent-color);
-}
-.form-icon-first:hover,
-.form-icon-first:focus {
-  fill: var(--accent-color);
-}
-.form-input:hover ~ .form-icon,
 .form-input:focus ~ .form-icon {
   fill: var(--accent-color);
 }
-.form-input:hover ~ .form-icon-first,
 .form-input:focus ~ .form-icon-first {
   fill: var(--accent-color);
 }
@@ -462,6 +468,7 @@ input {
   width: 16px;
   height: 15px;
   margin-right: 9px;
+  border-radius: 2px;
 }
 .field {
   display: flex;
@@ -472,6 +479,7 @@ input {
 .checkbox:checked + .checkbox-icon {
   background-color: var(--accent-color);
   border-color: var(--accent-color);
+  fill: var(--accent-color);
   background-image: url(../images/svg/Check-it.svg);
   background-size: contain;
   background-origin: border-box;
@@ -482,6 +490,7 @@ input {
 }
 .terms-link {
   color: var(--accent-color);
+  text-decoration: underline;
 }
 /* Features */
 .features-list {
@@ -965,12 +974,25 @@ input {
   letter-spacing: 0.06em;
   margin-left: 8px;
   gap: 10px;
+  border: none;
 
   background-color: var(--accent-color);
   color: var(--primary-white-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border: none;
+
+  transition: color var(--anim-fast), background-color var(--anim-fast),
+    box-shadow var(--anim-fast);
 }
+
+.button-sign:hover,
+.button-sign:focus {
+  background-color: var(--primary-white-color);
+  color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+}
+
 .join-container input {
   margin: 0;
   padding: 15px 16px;
@@ -999,7 +1021,7 @@ input {
   color: var(--accent-color);
 }
 /* Animation */
-/* @keyframes heartBeat {
+@keyframes heartBeat {
   0% {
     transform: translate(-50%, -50%);
   }
@@ -1023,4 +1045,4 @@ input {
   100% {
     transform: translate(-50%, -50%) scale(1);
   }
-} */
+}
